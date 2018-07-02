@@ -161,7 +161,7 @@ Custom property | Description | Default
         }
       },
       validate() {
-        this.set('invalid', (this.selected == null));
+        this.set('invalid', (this.hasAttribute('required') && this.selected == null));
         return !(this.invalid);
       }
 
